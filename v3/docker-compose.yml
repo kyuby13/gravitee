@@ -43,8 +43,8 @@ services:
     volumes:
       - data-elasticsearch:/usr/share/elasticsearch/data
     environment:
-      - http.host=192.168.3.20
-      - transport.host=192.168.3.20
+      - http.host=0.0.0.0
+      - transport.host=0.0.0.0
       - xpack.security.enabled=false
       - xpack.monitoring.enabled=false
       - cluster.name=elasticsearch
