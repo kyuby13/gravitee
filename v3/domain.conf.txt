@@ -1,1 +1,145 @@
+Ubah Bagian docker-compose.yml
 
+management_ui:
+    image: graviteeio/apim-management-ui:${APIM_VERSION:-3}
+    container_name: gio_apim_management_ui
+    restart: always
+    ports:
+      - "8084:8080"
+    depends_on:
+      - management_api
+    environment:
+      - MGMT_API_URL=http://svr-apim.wisata.com:8083/management/organizations/DEFAULT/environments/DEFAULT/
+    volumes:
+      - ./logs/apim-management-ui:/var/log/nginx
+    networks:
+      - frontend
+
+  portal_ui:
+    image: graviteeio/apim-portal-ui:${APIM_VERSION:-3}
+    container_name: gio_apim_portal_ui
+    restart: always
+    ports:
+      - "8085:8080"
+    depends_on:
+      - management_api
+    environment:
+      - PORTAL_API_URL=http://svr-apim.wisata.com:8083/portal/environments/DEFAULT
+    volumes:
+      - ./logs/apim-portal-ui:/var/log/nginx
+    networks:
+      - frontend
+
+--------------------------------------------------------------------
+
+Berikut isi conf untuk setiap domain menggunakan nginx reverse
+
+more apim.wisata.com.conf
+server {
+    #port akses utama
+    listen 80;
+    server_name apim.wisata.com;
+    #return 301 https://$host$request_uri;
+
+    location / {
+        #ubah port ke port dari aplikasi yang berjalan dalam kontainer untuk wordpress di port 8084
+    proxy_pass http://115.85.82.120:8084; # IP Public Server
+    }
+
+}
+
+
+server {
+
+    listen 443 http2 ssl;
+    server_name apim.wisata.com;
+    ssl_certificate /etc/ssl/certs/loyalto.id.pem;
+    ssl_certificate_key /etc/ssl/certs/loyalto.id.key;
+
+    access_log /var/log/nginx/reverse-access2.log;
+    error_log /var/log/nginx/reverse-error2.log;
+
+     # proxy_set_header X-Forwarded-For $proxy_protocol_addr; # To forward the original client's IP address
+     # proxy_set_header X-Forwarded-Proto $scheme; # to forward the  original protocol (HTTP or HTTPS)
+     # proxy_set_header Host $host; # to forward the original host requested by the client
+
+    location / {
+        #ubah port ke port dari aplikasi yang berjalan dalam kontainer untuk time di port 8080
+        return 301 http://$host$request_uri;
+    #   proxy_pass http://115.85.82.120:8084;
+    #    proxy_pass https://svr-apim.loyalto.id:8084;
+    #   proxy_pass http://localhost:8084;
+    #  proxy_set_header X-Forwarded-Host $host;
+    #    proxy_set_header X-Forwarded-Proto $scheme;
+    #    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    #    proxy_http_version 1.1;
+    #    proxy_set_header Upgrade $http_upgrade;
+    #    proxy_set_header Connection "Upgrade";
+    #    proxy_set_header Host $host;
+   }
+}
+
+------------------
+
+more gw-apim.wisata.com.conf
+server {
+    #port akses utama
+    listen 80;
+    #listen [::]:80;
+    #servername gunakan domain atau sub domain
+    server_name gw-apim.wisata.com;
+
+    listen 443 http2 ssl;
+    ssl_certificate /etc/ssl/certs/loyalto.id.pem;
+    ssl_certificate_key /etc/ssl/certs/loyalto.id.key;
+
+    access_log /var/log/nginx/reverse-access1.log;
+    error_log /var/log/nginx/reverse-error1.log;
+
+    location / {
+        #ubah port ke port dari aplikasi yang berjalan dalam kontainer untuk time di port 8082
+    proxy_pass http://127.0.0.1:8082;
+    }
+}
+
+------------------------
+
+more portal-apim.wisata.com.conf
+server {
+    #port akses utama
+    listen 80;
+    #listen [::]:80;
+    #servername gunakan domain atau sub domain
+    server_name portal-apim.wisata.com;
+
+    listen 443 http2 ssl;
+    ssl_certificate /etc/ssl/certs/loyalto.id.pem;
+    ssl_certificate_key /etc/ssl/certs/loyalto.id.key;
+
+    access_log /var/log/nginx/reverse-access4.log;
+    error_log /var/log/nginx/reverse-error4.log;
+
+    location / {
+        #ubah port ke port dari aplikasi yang berjalan dalam kontainer untuk time di port 8085
+    proxy_pass http://127.0.0.1:8085;
+    }
+}
+
+---------------------------
+
+ more svr-apim.wisata.com.conf
+server {
+    #port akses utama
+    listen 80;
+    #listen [::]:80;
+    #servername gunakan domain atau sub domain
+    server_name svr-apim.wisata.com;
+
+    access_log /var/log/nginx/reverse-access4.log;
+    error_log /var/log/nginx/reverse-error4.log;
+
+    location / {
+        #ubah port ke port dari aplikasi yang berjalan dalam kontainer untuk time di port 8085
+    proxy_pass http://127.0.0.1:8083;
+    }
+}
