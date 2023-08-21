@@ -1,0 +1,56 @@
+06:37:18.514 [graviteeio-finalizer] INFO  i.g.r.a.s.GraviteeApisContainer - Preparing Gravitee.io - Rest APIs for shutting-down...
+06:37:18.674 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - Applying graceful shutdown delay 0 MILLISECONDS
+06:37:18.676 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - Graceful shutdown delay exhausted
+06:37:18.682 [graviteeio-finalizer] INFO  i.g.r.a.s.GraviteeApisContainer - Shutting-down Gravitee.io - Rest APIs...
+06:37:18.683 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - Gravitee.io - Rest APIs is stopping
+06:37:18.731 [JettyShutdownThread] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@735167e1{HTTP/1.1, (http/1.1)}{0.0.0.0:8083}
+06:37:18.733 [JettyShutdownThread] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+06:37:18.942 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: AlertEventProducerManager
+06:37:18.943 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Alert Engine - Event producer
+06:37:19.046 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: AlertTriggerProviderManager
+06:37:19.047 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Alert Engine - Trigger provider manager
+06:37:19.050 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: JettyEmbeddedContainer
+06:37:19.124 [JettyShutdownThread] INFO  o.e.j.s.h.ContextHandler.management - Closing Spring root WebApplicationContext
+06:37:19.213 [JettyShutdownThread] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@8e164f2{/management,null,STOPPED}
+06:37:19.257 [JettyShutdownThread] INFO  o.e.j.s.h.ContextHandler.portal - Closing Spring root WebApplicationContext
+06:37:19.269 [JettyShutdownThread] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@13d86de8{/portal,null,STOPPED}
+06:37:19.312 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: InitializerService
+06:37:19.313 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Upgrader service
+06:37:19.314 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: KeyStoreLoaderManager
+06:37:19.314 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.node.certificates.KeyStoreLoaderManager
+06:37:19.315 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: ReporterManager
+06:37:19.317 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Reporter service
+06:37:19.334 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: NodeMonitorService
+06:37:19.335 [graviteeio-finalizer] INFO  i.g.n.m.monitor.NodeMonitorService - Stop node monitor
+06:37:19.335 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Node Monitor Service
+06:37:19.336 [graviteeio-finalizer] INFO  i.g.n.m.monitor.NodeMonitorService - Stop node monitor : DONE
+06:37:19.336 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: NodeHealthCheckService
+06:37:19.337 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Node Health-check service
+06:37:19.339 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: NodeInfosService
+06:37:19.339 [graviteeio-finalizer] INFO  i.g.n.m.infos.NodeInfosService - Stopping node infos service
+06:37:19.339 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Node Infos Service
+06:37:19.339 [graviteeio-finalizer] INFO  i.g.n.m.infos.NodeInfosService - Stop node infos service : DONE
+06:37:19.339 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: NodeMonitoringEventHandler
+06:37:19.340 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.node.monitoring.handler.NodeMonitoringEventHandler
+06:37:19.340 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: ManagementService
+06:37:19.341 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Node Management API service
+06:37:19.341 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: ServiceManager
+06:37:19.343 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Plugins - Services Manager
+06:37:19.351 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Search Indexer Service
+06:37:19.351 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Subscriptions Refresher Service
+06:37:19.354 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Gateway - Repository Bridge HTTP Server
+06:37:19.367 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Subscription Pre Expiration Notification service
+06:37:19.369 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Dynamic Properties Service
+06:37:19.369 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Sync Service
+06:37:19.369 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Auto Fetch Service
+06:37:19.371 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service Dictionary Service
+06:37:19.372 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: PluginRegistry
+06:37:19.372 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.plugin.core.internal.PluginRegistryImpl
+06:37:19.372 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: PluginEventListener
+06:37:19.372 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.plugin.core.internal.PluginEventListener
+06:37:19.373 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - 	Stopping component: LicenseService
+06:37:19.374 [graviteeio-finalizer] INFO  i.g.common.service.AbstractService - Destroying service License service
+06:37:19.377 [graviteeio-finalizer] INFO  i.g.r.a.s.node.GraviteeApisNode - Gravitee.io - Rest APIs stopped
+06:37:19.435 [vert.x-eventloop-thread-7] INFO  i.g.r.bridge.server.BridgeService - HTTP server for bridge has been stopped
+06:37:19.440 [vert.x-eventloop-thread-2] INFO  i.g.n.m.h.v.v.ManagementVerticle - Stopping Management API...
+06:37:19.489 [vert.x-eventloop-thread-2] INFO  i.g.n.m.h.v.v.ManagementVerticle - HTTP Server has been correctly stopped

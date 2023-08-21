@@ -1,0 +1,83 @@
+06:37:16.766 [graviteeio-finalizer] [] INFO  i.g.g.standalone.GatewayContainer - Preparing Gravitee.io - API Gateway for shutting-down...
+06:37:16.781 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - Applying graceful shutdown delay 0 MILLISECONDS
+06:37:16.785 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - Graceful shutdown delay exhausted
+06:37:16.786 [graviteeio-finalizer] [] INFO  i.g.g.standalone.GatewayContainer - Shutting-down Gravitee.io - API Gateway...
+06:37:16.786 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - Gravitee.io - API Gateway is stopping
+06:37:16.868 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: AlertEventProducerManager
+06:37:16.868 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Alert Engine - Event producer
+06:37:16.974 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: KeyStoreLoaderManager
+06:37:16.974 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.node.certificates.KeyStoreLoaderManager
+06:37:16.974 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: ReporterManager
+06:37:16.974 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Reporter service
+06:37:16.978 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: NodeMonitorService
+06:37:16.978 [graviteeio-finalizer] [] INFO  i.g.n.m.monitor.NodeMonitorService - Stop node monitor
+06:37:16.978 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Node Monitor Service
+06:37:16.979 [graviteeio-finalizer] [] INFO  i.g.n.m.monitor.NodeMonitorService - Stop node monitor : DONE
+06:37:16.979 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: NodeHealthCheckService
+06:37:16.979 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Node Health-check service
+06:37:16.979 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: NodeInfosService
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.n.m.infos.NodeInfosService - Stopping node infos service
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Node Infos Service
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.n.m.infos.NodeInfosService - Stop node infos service : DONE
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: NodeMonitoringEventHandler
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.node.monitoring.handler.NodeMonitoringEventHandler
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: ManagementService
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Node Management API service
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: ServiceManager
+06:37:17.006 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Plugins - Services Manager
+06:37:17.089 [vert.x-eventloop-thread-5] [] INFO  i.g.n.m.h.v.v.ManagementVerticle - Stopping Management API...
+06:37:17.167 [vert.x-eventloop-thread-5] [] INFO  i.g.n.m.h.v.v.ManagementVerticle - HTTP Server has been correctly stopped
+06:37:17.169 [vert.x-eventloop-thread-3] [] INFO  i.g.n.r.vertx.ReporterManagerImpl - Stopping reporter: io.gravitee.node.reporter.vertx.eventbus.EventBusReporterWrapper@433ff17e
+06:37:17.169 [vert.x-eventloop-thread-3] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.reporter.elasticsearch.ElasticsearchReporter
+06:37:17.169 [vert.x-eventloop-thread-3] [] INFO  i.g.r.e.ElasticsearchReporter - Stopping Elastic reporter engine... DONE
+06:37:17.169 [vert.x-eventloop-thread-3] [] INFO  i.g.n.r.vertx.ReporterManagerImpl - Stopping reporter: io.gravitee.node.reporter.vertx.eventbus.EventBusReporterWrapper@528082c3
+06:37:17.231 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Asynchronous Rate Limit proxy
+06:37:17.233 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.gateway.services.sync.synchronizer.ApiSynchronizer
+06:37:17.233 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.gateway.services.sync.synchronizer.DictionarySynchronizer
+06:37:17.233 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.gateway.services.sync.synchronizer.OrganizationSynchronizer
+06:37:17.233 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.gateway.services.sync.synchronizer.DebugApiSynchronizer
+06:37:17.235 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.gateway.services.sync.SyncManager
+06:37:17.236 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service API keys cache
+06:37:17.236 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Subscriptions cache repository
+06:37:17.236 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Gateway Sync Service
+06:37:17.238 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Gateway - Repository Bridge HTTP Server
+06:37:17.245 [graviteeio-finalizer] [] INFO  i.g.g.s.h.i.s.StandaloneHeartbeatStrategy - Stop gateway heartbeat service
+06:37:17.245 [graviteeio-finalizer] [] INFO  i.g.g.s.h.i.s.StandaloneHeartbeatStrategy - Stop gateway heartbeat service: DONE
+06:37:17.245 [vert.x-eventloop-thread-3] [] INFO  i.g.r.bridge.server.BridgeService - HTTP server for bridge has been stopped
+06:37:17.246 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Gateway - Debug service
+06:37:17.246 [graviteeio-finalizer] [] INFO  i.g.gateway.debug.DebugService - Gateway - Debug service is stopping
+06:37:17.248 [graviteeio-finalizer] [] INFO  i.g.gateway.debug.DebugService - Stopping component: DebugReactorEventListener
+06:37:17.249 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.gateway.jupiter.debug.DebugReactorEventListener
+06:37:17.250 [graviteeio-finalizer] [] INFO  i.g.gateway.debug.DebugService - Gateway - Debug service stopped
+06:37:17.251 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Endpoints Discovery
+06:37:17.251 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Health-check service
+06:37:17.251 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: PluginRegistry
+06:37:17.251 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.plugin.core.internal.PluginRegistryImpl
+06:37:17.251 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: PluginEventListener
+06:37:17.251 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.plugin.core.internal.PluginEventListener
+06:37:17.251 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: LicenseService
+06:37:17.252 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service License service
+06:37:17.253 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: ClusterService
+06:37:17.253 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: SubscriptionDispatcher
+06:37:17.254 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: VertxEmbeddedContainer
+06:37:17.255 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: ReactorEventListener
+06:37:17.255 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service io.gravitee.gateway.reactor.handler.ReactorEventListener
+06:37:17.255 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - 	Stopping component: NodeMonitoringReporterService
+06:37:17.256 [graviteeio-finalizer] [] INFO  i.g.common.service.AbstractService - Destroying service Node Monitoring service
+06:37:17.256 [graviteeio-finalizer] [] INFO  i.g.g.standalone.node.GatewayNode - Gravitee.io - API Gateway stopped
+06:37:17.261 [vert.x-eventloop-thread-3] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.261 [vert.x-eventloop-thread-1] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.261 [vert.x-eventloop-thread-7] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.261 [vert.x-eventloop-thread-6] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.261 [vert.x-eventloop-thread-0] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.262 [vert.x-eventloop-thread-3] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
+06:37:17.262 [vert.x-eventloop-thread-0] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
+06:37:17.262 [vert.x-eventloop-thread-5] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.262 [vert.x-eventloop-thread-2] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.262 [vert.x-eventloop-thread-5] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
+06:37:17.262 [vert.x-eventloop-thread-2] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
+06:37:17.263 [vert.x-eventloop-thread-4] [] INFO  i.g.g.s.vertx.ReactorVerticle - Stopping HTTP Server...
+06:37:17.263 [vert.x-eventloop-thread-4] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
+06:37:17.264 [vert.x-eventloop-thread-1] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
+06:37:17.265 [vert.x-eventloop-thread-6] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
+06:37:17.272 [vert.x-eventloop-thread-7] [] INFO  i.g.g.s.vertx.ReactorVerticle - HTTP Server has been correctly stopped
